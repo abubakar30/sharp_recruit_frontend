@@ -12,13 +12,13 @@ const LoginPage = () => {
     setErrorMsg('');
 
     try {
-      const response = await fetch('http://localhost:5274/Auth/Login', {
+      const response = await fetch('http://localhost:5274/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          username: email,
+          email: email,
           password: password,
         }),
       });
@@ -30,7 +30,7 @@ const LoginPage = () => {
       const data = await response.json();
       localStorage.setItem('jwt', data.token);
       alert('Login successful!');
-      navigate('/form'); // Adjust to your actual route
+      navigate('/CandidateForm'); // Adjust to your actual route
     } catch (error) {
       setErrorMsg('Invalid email or password');
     }
