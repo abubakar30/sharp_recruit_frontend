@@ -42,7 +42,7 @@ const LoginPage = () => {
       <div className="w-1/2 bg-white flex justify-center items-center">
         <div className="text-center">
           <img
-            src="https://cdn.dribbble.com/users/722246/screenshots/15127673/media/41b27b1f0b26ad72aa5cd61b12310b13.png"
+            src="/login.jpg"
             alt="Illustration"
             className="w-[70%] mx-auto"
           />
